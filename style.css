@@ -7,6 +7,8 @@ body {
   width: 70%;
   color: white;
   text-align: center;
+  margin: 0 auto;
+  margin-top: 300px;
   /* display: grid;
   grid-template-areas:
     "sb" "sb" "sb" "sb"
@@ -19,6 +21,7 @@ body {
 h1 {
   color: #ffd703;
   font-family: "Bebas Neue", cursive;
+  margin: 0;
 }
 
 h2 {
@@ -52,7 +55,7 @@ p {
 }
 
 #homepage-h2 {
-  font-size: 24px;
+  font-size: 50px;
   /* grid-area: wg; */
 }
 /* 

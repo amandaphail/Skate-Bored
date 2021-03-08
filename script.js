@@ -13,11 +13,11 @@ async function getSkates(){
         // console.log(response.data[0].borough)
 
         
-            let data = response.data
-            for (i = 0; i < data.length; i++){
-                console.log(data[i].borough)
+        let data = response.data
+        for (i = 0; i < data.length; i++){
+            console.log(data[i].borough)
                 
-            }
+         }
                                   
 
     } catch(err){
@@ -28,12 +28,14 @@ async function getSkates(){
 
 getSkates()
 
-function setLocationValues(location){
-    location.forEach((borough) => {
-        let option = document.createElement('option')
-        option.value = borough
-        option.textContent = borough
-        locationDD.appendChild(borough)
-    })
-}
+
+
+// function setLocationValues(location){
+//     location.forEach((borough) => {
+//         let option = document.createElement('option')
+//         option.value = borough
+//         option.textContent = borough
+//         locationDD.appendChild(borough)
+//     })
+// }
 
