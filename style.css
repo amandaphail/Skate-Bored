@@ -1,0 +1,53 @@
+body {
+  background-color: #262626;
+  margin: 0 auto;
+}
+
+#homepage {
+  width: 70%;
+  color: white;
+  display: grid;
+  grid-template-areas:
+    "sb" "sb" "sb" "sb"
+    "wg" "wg" "wg" "wg"
+    "lo" "lo" "fe" "fe"
+    "se" "se" "se" "se"
+    "rp" "rp" "rp" "rp";
+}
+
+h1 {
+  color: #ffd703;
+  font-size: 150px;
+  font-family: "Bebas Neue", cursive;
+  grid-area: sb;
+}
+
+h2 {
+  color: white;
+  font-size: 24px;
+  font-family: "Amatic SC", cursive;
+  grid-area: wg;
+}
+
+#location {
+  grid-area: lo;
+}
+#features {
+  grid-area: fe;
+}
+
+#search {
+  background-color: #947b00;
+  color: white;
+  padding: 10px;
+  font-family: "Bebas Neue", cursive;
+  grid-area: se;
+}
+
+#randomPark {
+  background-color: black;
+  color: #947b00;
+  padding: 10px;
+  font-family: "Bebas Neue", cursive;
+  grid-area: rp;
+}
