@@ -15,8 +15,12 @@ async function getSkates(){
         
         let data = response.data
         for (i = 0; i < data.length; i++){
-            console.log(data[i].borough)
-                
+            let borough = data[i].borough
+            let name = data[i].name
+            // console.log(borough)
+            if (borough.includes("Brooklyn")){
+                console.log(name)
+            }
          }
                                   
 
