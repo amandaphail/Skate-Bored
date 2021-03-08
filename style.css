@@ -3,19 +3,17 @@ body {
   margin: 0 auto;
 }
 
-
-
 #homepage {
   width: 70%;
   color: white;
   text-align: center;
-  display: grid;
+  /* display: grid;
   grid-template-areas:
     "sb" "sb" "sb" "sb"
     "wg" "wg" "wg" "wg"
     "lo" "lo" "fe" "fe"
     "se" "se" "se" "se"
-    "rp" "rp" "rp" "rp";
+    "rp" "rp" "rp" "rp"; */
 }
 
 h1 {
@@ -26,6 +24,10 @@ h1 {
 h2 {
   color: white;
   font-family: "Amatic SC", cursive;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
 }
 
 .search {
@@ -46,14 +48,14 @@ h2 {
 #homepage-h1 {
   font-size: 150px;
   letter-spacing: 10px;
-  grid-area: sb;
+  /* grid-area: sb; */
 }
 
 #homepage-h2 {
   font-size: 24px;
-  grid-area: wg;
+  /* grid-area: wg; */
 }
-
+/* 
 #hompage-loc {
   grid-area: lo;
 }
@@ -67,4 +69,4 @@ h2 {
 
 #homepage-rp {
   grid-area: rp;
-}
+} */
