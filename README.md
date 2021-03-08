@@ -280,9 +280,7 @@ https://dev.socrata.com/foundry/data.cityofnewyork.us/8knb-zsb6
 
 ## Wireframes
 
-https://i.imgur.com/jJozVO0.png
-
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/S3UoA3D" data-context="false" ><a href="//imgur.com/a/S3UoA3D"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![alt text](https://res.cloudinary.com/mandatea/image/upload/v1615217639/Skate_Bored_hzqbw0.png "Logo Title Text 1")
 
 ### MVP/PostMVP
 
@@ -314,9 +312,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## Priority Matrix
 
-https://i.imgur.com/JIWJfE2.png
-
-<blockquote class="imgur-embed-pub" lang="en" data-id="JIWJfE2"><a href="https://imgur.com/JIWJfE2">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![alt text](https://res.cloudinary.com/mandatea/image/upload/v1615217751/download_1_p6iwcd.png "Logo Title Text 1")
 
 ## Timeframes
 
@@ -356,4 +352,5 @@ function reverse(string) {
 ## Change Log
 
 Use this section to document what changes were made and the reasoning behind those changes.
+
 # Skate-Bored
