@@ -3,9 +3,12 @@ body {
   margin: 0 auto;
 }
 
+
+
 #homepage {
   width: 70%;
   color: white;
+  text-align: center;
   display: grid;
   grid-template-areas:
     "sb" "sb" "sb" "sb"
