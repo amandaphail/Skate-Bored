@@ -10,10 +10,15 @@ async function getSkates(){
         const response = await axios.get('https://data.cityofnewyork.us/resource/8knb-zsb6.json')
 
         console.log(response)
-        console.log(response.data[0].borough)
+        // console.log(response.data[0].borough)
 
-        let parkBorough = response.data[i].borough
-        console.log(parkBorough)
+        
+            let data = response.data
+            for (i = 0; i < data.length; i++){
+                console.log(data[i].borough)
+                
+            }
+                                  
 
     } catch(err){
         console.log(err)
@@ -32,4 +37,3 @@ function setLocationValues(location){
     })
 }
 
-setLocationValues(3)
