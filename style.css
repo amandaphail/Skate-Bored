@@ -83,13 +83,22 @@ p {
 
 #search-results {
   margin: 0 auto;
-  margin-top: 200px;
+  /* margin-top: 200px; */
 }
 
 #sr-main {
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 100px; */
+}
+
+.result {
   background-color: #c4c4c4;
   width: 70%;
   height: auto;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+  padding: 10px;
+  /* justify-content: space-around; */
+  /* where do i use justify content to space the results easily? */
 }
