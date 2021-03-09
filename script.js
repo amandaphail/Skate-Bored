@@ -3,7 +3,7 @@
 
 const locationDD = document.querySelector('.location')
 const option = document.querySelector('option')
-
+const searchResults = document.querySelector('#sr-main')
 
 async function getSkateParks(){
 
@@ -34,7 +34,7 @@ function setLocation (data){
         let borough = data[i].borough
         let name = data[i].name
         let locOption = option.value
-        // console.log(borough)
+        
         if (borough.includes(locOption)){
             // console.log(name)
             getLocation(name)
@@ -58,12 +58,21 @@ function setLocation (data){
 
 function getLocation(event){
     console.log(event)
+    // removeResults()
+    // displayResults(event)
 }
 
 
 locationDD.addEventListener('change', getSkateParks)
 
+function displayLocation(location){
 
+    let result = createElement('div')
+    result.textContent = location
+    result.classList.add('result')
+    searchResults.appendChild(result)
+
+}
 
 
 
