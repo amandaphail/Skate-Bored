@@ -14,7 +14,7 @@ async function getSkateParks(){
         // console.log(response.data[0].borough)
 
         setLocation(response.data)
-        setFeature(response.data)
+        // setFeature(response.data)
                                   
 
     } catch(err){
@@ -36,22 +36,35 @@ function setLocation (data){
         let locOption = option.value
         // console.log(borough)
         if (borough.includes(locOption)){
-            console.log(name)
-        }
-     }
-    }
-
-function setFeature(data){
-    for (i = 0; i < data.length; i++){
-        let feature = data[i].features_2
-        let name = feature
-        let featOption = option.value
-        // console.log(borough)
-        if (feature.includes(featOption)){
-            console.log(name)
+            // console.log(name)
+            getLocation(name)
         }
      }
 }
+
+// function setFeature(data){
+//     for (i = 0; i < data.length; i++){
+//         let feature = data[i].features_2
+//         let name = feature
+//         let featOption = option.value
+//         // console.log(borough)
+//         if (feature.includes(featOption)){
+//             console.log(name)
+//         }
+//      }
+// }
+
+
+
+function getLocation(event){
+    console.log(event)
+}
+
+
+locationDD.addEventListener('change', getSkateParks)
+
+
+
 
 
 // function removeResults (){
@@ -62,3 +75,6 @@ function setFeature(data){
 //     }
 // }
 
+
+
+//random park generate - math methods?
