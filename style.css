@@ -89,7 +89,7 @@ p {
 #sr-main {
   background-color: #c4c4c4;
   width: 70%;
-  height: 100px;
+  height: auto;
   margin: 0 auto;
   margin-bottom: 100px;
 }
