@@ -8,7 +8,7 @@ body {
   color: white;
   text-align: center;
   margin: 0 auto;
-  margin-top: 130px;
+  margin-top: 100px;
   /* display: grid;
   grid-template-areas:
     "sb" "sb" "sb" "sb"
@@ -61,18 +61,22 @@ p {
   font-size: 50px;
   /* grid-area: wg; */
 }
-/* 
-#hompage-loc {
-  grid-area: lo;
+
+#homepage-loc {
+  /* grid-area: lo; */
+  padding: 5px;
 }
-#hompage-feat {
-  grid-area: fe;
+#homepage-feat {
+  /* grid-area: fe; */
+  padding: 5px;
 }
 
 #homepage-search {
-  grid-area: se;
+  /* grid-area: se; */
+  margin: 15px;
 }
 
 #homepage-rp {
-  grid-area: rp;
-} */
+  /* grid-area: rp; */
+  margin: 15px;
+}
