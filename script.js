@@ -15,12 +15,18 @@ async function getSkateParks(){
         // console.log(response.data[0].borough)
         
         if (locationDD.value !== "null"){
-        setLocation(response.data)
+            setLocation(response.data)
         } else {
+            removeResults()
             console.log("location null")
         }
-
-        //setFeature(response.data)
+        
+        if(featuresDD.value !== "null"){
+            setFeature(response.data)
+        } else {
+            console.log("features null")
+        }
+        
                                   
 
     } catch(err){
@@ -50,11 +56,13 @@ function setLocation (data){
 
 function setFeature(data){
     for (i = 0; i < data.length; i++){
-        let feature = data[i].features_2
-        let name = feature
-        let featOption = locationDD.value
+        let feature1 = data[i].features_1
+        let feature2 = data[i].features_2
+        let feature3 = data[i].features_3
+        let name = data[i].name
+        let featOption = featuresDD.value
         // console.log(borough)
-        if (feature.includes(featOption)){
+        if (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption)){
             console.log(name)
         }
      }
