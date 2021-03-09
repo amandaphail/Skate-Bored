@@ -1,7 +1,8 @@
 // https://data.cityofnewyork.us/resource/8knb-zsb6.json
 
 
-let locationDD = document.querySelector('.location')
+const locationDD = document.querySelector('.location')
+const option = document.querySelector('option')
 
 
 async function getSkates(){
@@ -17,8 +18,9 @@ async function getSkates(){
         for (i = 0; i < data.length; i++){
             let borough = data[i].borough
             let name = data[i].name
+            let locOption = option.value
             // console.log(borough)
-            if (borough.includes("Brooklyn")){
+            if (borough.includes(locOption)){
                 console.log(name)
             }
          }
