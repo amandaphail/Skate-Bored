@@ -30,7 +30,7 @@ async function getSkateParks(){
 
 function setLocation (data){        
     // let data = response.data
-    
+    removeResults()
     for (i = 0; i < data.length; i++){
         let borough = data[i].borough
         let name = data[i].name
@@ -59,7 +59,7 @@ function setLocation (data){
 
 function getLocation(event){
     console.log(event)
-    // removeResults()
+    
     displayLocation(event)
 }
 
@@ -80,13 +80,13 @@ function displayLocation(location){
 
 
 
-// function removeResults (){
+function removeResults (){
 
-//     // while we have first child (aka parent isnt empty) - remove first child
-//     while(picContainer.firstChild){
-//         picContainer.removeChild(picContainer.firstChild)
-//     }
-// }
+    // while we have first child (aka parent isnt empty) - remove first child
+    while(searchResults.firstChild){
+        searchResults.removeChild(searchResults.firstChild)
+    }
+}
 
 
 
