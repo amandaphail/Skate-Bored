@@ -64,6 +64,7 @@ function setFeature(data){
         // console.log(borough)
         if (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption)){
             console.log(name)
+            // console.log(data[i].borough)
         }
      }
 }
@@ -77,7 +78,7 @@ function getLocation(event){
 }
 
 
-locationDD.addEventListener('change', getSkateParks)
+locationDD.addEventListener('submit', getSkateParks)
 featuresDD.addEventListener('change', getSkateParks)
 
 
