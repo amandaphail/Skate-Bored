@@ -5,6 +5,7 @@ const locationDD = document.querySelector('.location')
 const featuresDD =document.querySelector('.features')
 // const option = document.querySelector('option')
 const searchResults = document.querySelector('#sr-main')
+const form = document.querySelector('.form')
 
 async function getSkateParks(){
 
@@ -24,6 +25,7 @@ async function getSkateParks(){
         if(featuresDD.value !== "null"){
             setFeature(response.data)
         } else {
+            removeResults()
             console.log("features null")
         }
         
@@ -63,7 +65,7 @@ function setFeature(data){
         let featOption = featuresDD.value
         // console.log(borough)
         if (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption)){
-            console.log(name)
+            getFeatures(name)
             // console.log(data[i].borough)
         }
      }
@@ -77,9 +79,24 @@ function getLocation(event){
     displayLocation(event)
 }
 
+function getFeatures(event){
+    console.log(event)
+    
+    displayFeatures(event)
+}
 
-locationDD.addEventListener('submit', getSkateParks)
+locationDD.addEventListener('change', getSkateParks)
 featuresDD.addEventListener('change', getSkateParks)
+
+// document.getElementById("homepage-form").onsubmit = function() {myFunction()};
+
+form.onsubmit = function submit(){
+    return false;
+    //keeps page from refreshing when hit submit
+}
+// https://stackoverflow.com/questions/19454310/stop-form-refreshing-page-on-submit 
+// https://www.w3schools.com/jsref/event_onsubmit.asp
+
 
 
 
@@ -92,7 +109,12 @@ function displayLocation(location){
 
 }
 
-
+function displayFeatures(feature){
+    let result = document.createElement('p')
+    result.innerText = feature
+    result.classList.add('result')
+    searchResults.appendChild(result)
+}
 
 function removeResults (){
 
