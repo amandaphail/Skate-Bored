@@ -2,7 +2,8 @@
 
 
 const locationDD = document.querySelector('.location')
-const option = document.querySelector('option')
+const featuresDD =document.querySelector('.features')
+// const option = document.querySelector('option')
 const searchResults = document.querySelector('#sr-main')
 
 async function getSkateParks(){
@@ -12,10 +13,14 @@ async function getSkateParks(){
 
         console.log(response)
         // console.log(response.data[0].borough)
-        console.log(response)
-
+        
+        if (locationDD.value !== "null"){
         setLocation(response.data)
-        // setFeature(response.data)
+        } else {
+            console.log("location null")
+        }
+
+        //setFeature(response.data)
                                   
 
     } catch(err){
@@ -43,17 +48,17 @@ function setLocation (data){
      }
 }
 
-// function setFeature(data){
-//     for (i = 0; i < data.length; i++){
-//         let feature = data[i].features_2
-//         let name = feature
-//         let featOption = option.value
-//         // console.log(borough)
-//         if (feature.includes(featOption)){
-//             console.log(name)
-//         }
-//      }
-// }
+function setFeature(data){
+    for (i = 0; i < data.length; i++){
+        let feature = data[i].features_2
+        let name = feature
+        let featOption = locationDD.value
+        // console.log(borough)
+        if (feature.includes(featOption)){
+            console.log(name)
+        }
+     }
+}
 
 
 
@@ -65,7 +70,7 @@ function getLocation(event){
 
 
 locationDD.addEventListener('change', getSkateParks)
-
+featuresDD.addEventListener('change', getSkateParks)
 
 
 
