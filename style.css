@@ -80,3 +80,16 @@ p {
   /* grid-area: rp; */
   margin: 15px;
 }
+
+#search-results {
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+#sr-main {
+  background-color: #c4c4c4;
+  width: 70%;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}

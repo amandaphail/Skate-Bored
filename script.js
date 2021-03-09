@@ -12,6 +12,7 @@ async function getSkateParks(){
 
         console.log(response)
         // console.log(response.data[0].borough)
+        console.log(response)
 
         setLocation(response.data)
         // setFeature(response.data)
@@ -23,7 +24,7 @@ async function getSkateParks(){
     }
 }
 
-getSkateParks()
+// getSkateParks()
 
 
 
@@ -33,7 +34,7 @@ function setLocation (data){
     for (i = 0; i < data.length; i++){
         let borough = data[i].borough
         let name = data[i].name
-        let locOption = option.value
+        let locOption = locationDD.value
         
         if (borough.includes(locOption)){
             // console.log(name)
@@ -59,16 +60,20 @@ function setLocation (data){
 function getLocation(event){
     console.log(event)
     // removeResults()
-    // displayResults(event)
+    displayLocation(event)
 }
 
 
 locationDD.addEventListener('change', getSkateParks)
 
+
+
+
 function displayLocation(location){
 
-    let result = createElement('div')
-    result.textContent = location
+
+    let result = document.createElement('p')
+    result.innerText = location
     result.classList.add('result')
     searchResults.appendChild(result)
 
