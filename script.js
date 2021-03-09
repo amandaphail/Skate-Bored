@@ -28,17 +28,8 @@ async function getSkateParks(){
             removeResults()
             console.log("features null")
         }
-
         
-        // let feature1 = response.data[i].features_1
-        // let feature2 = response.data[i].features_2
-        // let feature3 = response.data[i].features_3
-        // let featOption = featuresDD.value
-        
-        
-        
-                             
-        
+                                  
 
     } catch(err){
         console.log(err)
@@ -46,12 +37,12 @@ async function getSkateParks(){
     }
 }
 
-// getSkateParks()
+
 
 
 
 function setLocation (data){        
-    // let data = response.data
+    
     removeResults()
     for (i = 0; i < data.length; i++){
         let borough = data[i].borough
@@ -73,16 +64,19 @@ function setFeature(data){
         let name = data[i].name
         let featOption = featuresDD.value
         // console.log(borough)
-
+        
         if(locationDD.value === "null" && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
             console.log("location null and feature selected")
-
-        }
-
-        if (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption)){
             getFeatures(name)
-            // console.log(data[i].borough)
+            console.log(data[i].borough)
+
         }
+
+        // if (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption)){
+        //     getFeatures(name)
+        //     console.log(data[i].borough)
+        // }
+
      }
 }
 
