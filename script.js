@@ -15,30 +15,27 @@ async function getSkateParks(){
         console.log(response)
         // console.log(response.data[0].borough)
         
-        // if (locationDD.value !== "null"){
-        //     setLocation(response.data)
-        // } else {
-        //     removeResults()
-        //     console.log("location null")
-        // }
-        
-        // if(featuresDD.value !== "null"){
-        //     setFeature(response.data)
-        // } else {
-        //     removeResults()
-        //     console.log("features null")
-        // }
-
-        
-        let feature1 = response.data[i].features_1
-        let feature2 = response.data[i].features_2
-        let feature3 = response.data[i].features_3
-        let featOption = featuresDD.value
-        
-        if(locationDD.value === "null" && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
-            console.log("location null and feature selected")
-
+        if (locationDD.value !== "null"){
+            setLocation(response.data)
+        } else {
+            removeResults()
+            console.log("location null")
         }
+        
+        if(featuresDD.value !== "null"){
+            setFeature(response.data)
+        } else {
+            removeResults()
+            console.log("features null")
+        }
+
+        
+        // let feature1 = response.data[i].features_1
+        // let feature2 = response.data[i].features_2
+        // let feature3 = response.data[i].features_3
+        // let featOption = featuresDD.value
+        
+        
         
                              
         
@@ -76,6 +73,12 @@ function setFeature(data){
         let name = data[i].name
         let featOption = featuresDD.value
         // console.log(borough)
+
+        if(locationDD.value === "null" && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
+            console.log("location null and feature selected")
+
+        }
+
         if (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption)){
             getFeatures(name)
             // console.log(data[i].borough)
