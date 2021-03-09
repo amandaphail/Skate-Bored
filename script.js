@@ -71,7 +71,6 @@ locationDD.addEventListener('change', getSkateParks)
 
 function displayLocation(location){
 
-
     let result = document.createElement('p')
     result.innerText = location
     result.classList.add('result')
