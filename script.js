@@ -15,11 +15,12 @@ async function getSkateParks(){
         console.log(response)
         // console.log(response.data[0].borough)
         
-        if (locationDD.value === "null" || featuresDD.value === "null"){
-            removeResults()
-            console.log("one selector is null")
+        // if (locationDD.value === "null" || featuresDD.value === "null"){
+        //     removeResults()
+        //     console.log("one selector is null")
 
-        } else if (locationDD.value !== "null" && featuresDD.value === "null"){
+        // } else 
+        if (locationDD.value !== "null" && featuresDD.value === "null"){
             setLocation(response.data)
         } else if(locationDD.value === "null" && featuresDD.value !== "null"){
             setFeature(response.data)
