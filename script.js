@@ -142,12 +142,11 @@ submit.addEventListener('submit', getSkateParks)
 
 
 function displaySetUp(){
-    removeHomePage()
+    // removeHomePage()
     createResultHeader()
 }
 
 function displayLocation(location){
-    removeHomePage()
     let result = document.createElement('p')
     result.innerText = location
     result.classList.add('result')
@@ -157,7 +156,6 @@ function displayLocation(location){
 }
 
 function displayFeatures(feature){
-    removeHomePage()
     let result = document.createElement('p')
     result.innerText = feature
     result.classList.add('result')
@@ -168,7 +166,6 @@ function displayFeatures(feature){
 
 
 function displayBoth(both){
-    
     let result = document.createElement('p')
     result.innerText = both
     result.classList.add('result')
