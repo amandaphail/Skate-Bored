@@ -46,8 +46,6 @@ async function getSkateParks(event){
 
 
 function setLocation (data){        
-    
-    
     displaySetUp()
     for (i = 0; i < data.length; i++){
         let borough = data[i].borough
@@ -58,7 +56,8 @@ function setLocation (data){
         if (featuresDD.value === "null" && borough.includes(locOption)){
         // if (borough.includes(locOption)){
             // console.log(name)
-            displayLocation(name)
+            // displayLocation(name)
+            displayResults(name)
         } 
         // else {
         //     // getBoth(data)
@@ -78,8 +77,9 @@ function setFeature(data){
         // console.log(borough)
         
         if(locationDD.value === "null" && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
-            console.log("location null and feature selected")
-            displayFeatures(name)
+            // console.log("location null and feature selected")
+            // displayFeatures(name)
+            displayResults(name)
             console.log(data[i].borough)
         }  
         // else {
@@ -106,7 +106,8 @@ function getBoth(data){
         let name = data[i].name
 
         if(borough.includes(locOption) && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
-            displayBoth(name)
+            displayResults(name)
+            // displayBoth(name)
             // console.log(name)
         }
     }
@@ -147,32 +148,38 @@ function displaySetUp(){
     createResultHeader()
 }
 
-function displayLocation(location){
+function displayResults(value){
     let result = document.createElement('p')
-    result.innerText = location
+    result.innerText = value
     result.classList.add('result')
     searchResults.appendChild(result)
-    console.log(location)
-
+    console.log(value)
 }
 
-function displayFeatures(feature){
-    let result = document.createElement('p')
-    result.innerText = feature
-    result.classList.add('result')
-    searchResults.appendChild(result)
-    console.log(feature)
-}
+// function displayLocation(location){
+//     let result = document.createElement('p')
+//     result.innerText = location
+//     result.classList.add('result')
+//     searchResults.appendChild(result)
+//     console.log(location)
 
+// }
 
+// function displayFeatures(feature){
+//     let result = document.createElement('p')
+//     result.innerText = feature
+//     result.classList.add('result')
+//     searchResults.appendChild(result)
+//     console.log(feature)
+// }
 
-function displayBoth(both){
-    let result = document.createElement('p')
-    result.innerText = both
-    result.classList.add('result')
-    searchResults.appendChild(result)
-    console.log(both)
-}
+// function displayBoth(both){
+//     let result = document.createElement('p')
+//     result.innerText = both
+//     result.classList.add('result')
+//     searchResults.appendChild(result)
+//     console.log(both)
+// }
 
 let srHeader = document.querySelector('#sr-header')
 
