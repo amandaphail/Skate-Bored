@@ -54,6 +54,8 @@ function setLocation (data){
         // if (borough.includes(locOption)){
             // console.log(name)
             getLocation(name)
+        } else {
+            // getBoth()
         }
      }
 }
@@ -79,10 +81,15 @@ function setFeature(data){
         //     console.log(data[i].borough)
         // }
 
+     } else {
+        //  getBoth()
      }
 }
 
-
+function getBoth(data){
+    removeResults()
+    
+}
 
 function getLocation(event){
     console.log(event)
