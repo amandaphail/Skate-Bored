@@ -8,6 +8,7 @@ const searchResults = document.querySelector('#sr-main')
 let submit = document.querySelector(".form")
 // let homepage = document.querySelector("#homepage")
 let main = document.querySelector('main')
+// let srHeader = document.querySelector('#sr-header')
 
 
 async function getSkateParks(event){
@@ -47,6 +48,7 @@ async function getSkateParks(event){
 function setLocation (data){        
     
     removeResults()
+    displaySetUp()
     for (i = 0; i < data.length; i++){
         let borough = data[i].borough
         let name = data[i].name
@@ -66,6 +68,7 @@ function setLocation (data){
 
 function setFeature(data){
     removeResults()
+    displaySetUp()
     for (i = 0; i < data.length; i++){
         let feature1 = data[i].features_1
         let feature2 = data[i].features_2
@@ -92,6 +95,7 @@ function setFeature(data){
 
 function getBoth(data){
     removeResults()
+    displaySetUp()
     for(i= 0; i < data.length; i++){
         let borough = data[i].borough
         let locOption = locationDD.value
@@ -137,7 +141,10 @@ submit.addEventListener('submit', getSkateParks)
 // https://www.w3schools.com/jsref/event_onsubmit.asp
 
 
-
+function displaySetUp(){
+    removeHomePage()
+    createResultHeader()
+}
 
 function displayLocation(location){
     removeHomePage()
@@ -158,8 +165,10 @@ function displayFeatures(feature){
     console.log(feature)
 }
 
+
+
 function displayBoth(both){
-    removeHomePage()
+    
     let result = document.createElement('p')
     result.innerText = both
     result.classList.add('result')
@@ -167,6 +176,17 @@ function displayBoth(both){
     console.log(both)
 }
 
+let srHeader = document.querySelector('#sr-header')
+
+function createResultHeader(){
+    let header = document.createElement('div')
+    let title = document.createElement('div')
+    title.innerText = "Skate Bored"
+    title.classList.add('results-h1')
+    header.appendChild(title)
+    srHeader.appendChild(header)
+    
+}
 
 
 function removeResults (){
