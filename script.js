@@ -8,7 +8,7 @@ const searchResults = document.querySelector('#sr-main')
 let submit = document.querySelector(".form")
 // let homepage = document.querySelector("#homepage")
 let main = document.querySelector('main')
-// let srHeader = document.querySelector('#sr-header')
+let srHeader = document.querySelector('#sr-header')
 
 
 async function getSkateParks(event){
@@ -143,7 +143,7 @@ submit.addEventListener('submit', getSkateParks)
 
 
 function displaySetUp(){
-    // removeResults()
+    removeResults()
     removeHomePage()
     createResultHeader()
 }
@@ -181,7 +181,7 @@ function displayResults(value){
 //     console.log(both)
 // }
 
-let srHeader = document.querySelector('#sr-header')
+
 
 function createResultHeader(){
     let header = document.createElement('div')
