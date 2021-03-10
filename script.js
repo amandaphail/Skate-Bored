@@ -9,6 +9,7 @@ let submit = document.querySelector(".form")
 // let homepage = document.querySelector("#homepage")
 let main = document.querySelector('main')
 let srHeader = document.querySelector('#sr-header')
+const button = document.querySelector(".randomPark")
 
 
 async function getSkateParks(event){
@@ -33,7 +34,15 @@ async function getSkateParks(event){
             getBoth(response.data)
         }
         
-                                  
+
+        // https://css-tricks.com/snippets/javascript/select-random-item-array/
+         const parksArray = response.data                
+         
+         const randomPark = parksArray[Math.floor(Math.random() * parksArray.length)]
+         
+        //  console.log(randomPark.name)
+
+         displayResults(randomPark.name )
 
     } catch(err){
         console.log(err)
@@ -210,3 +219,14 @@ function removeHomePage(){
 }
 
 //random park generate - math methods?
+
+
+function getRandomPark(){
+
+}
+
+
+
+// button.addEventListener('click', getRandomPark)
+
+
