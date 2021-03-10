@@ -103,6 +103,14 @@ p {
   /* where do i use justify content to space the results easily? */
 }
 
+.sr-header{
+  background-color: #262626;
+}
+
 .results-h1{
-  
+  color: #ffd703;
+  font-family: "Bebas Neue", cursive;
+  margin: 0;
+  font-size: 50px;
+  letter-spacing: 10px;
 }
