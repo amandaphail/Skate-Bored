@@ -46,7 +46,7 @@ async function getSkateParks(event){
         // // }
                        
          
-        button.addEventListener('click', getRandomPark(response.data))
+
 
          
 
@@ -70,7 +70,7 @@ function getRandomPark(parksArray){
 
 
 
- //
+ //button.addEventListener('click', )
 
 
 function setLocation (data){        
