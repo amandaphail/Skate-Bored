@@ -55,7 +55,7 @@ function setLocation (data){
             // console.log(name)
             getLocation(name)
         } else {
-            // getBoth()
+            getBoth(data)
         }
      }
 }
@@ -73,22 +73,32 @@ function setFeature(data){
             console.log("location null and feature selected")
             getFeatures(name)
             console.log(data[i].borough)
-
-        }
-
+        }  else {
+             getBoth(data)
+         }
         // if (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption)){
         //     getFeatures(name)
         //     console.log(data[i].borough)
         // }
 
-     } else {
-        //  getBoth()
      }
 }
 
 function getBoth(data){
     removeResults()
-    
+    for(i= 0; i < data.length; i++){
+        let borough = data[i].borough
+        let locOption = locationDD.value
+        let feature1 = data[i].features_1
+        let feature2 = data[i].features_2
+        let feature3 = data[i].features_3
+        let featOption = featuresDD.value
+        let name = data[i].name
+
+        if(borough.includes(locOption) && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
+            console.log(name)
+        }
+    }
 }
 
 function getLocation(event){
