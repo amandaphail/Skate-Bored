@@ -35,14 +35,13 @@ async function getSkateParks(event){
         }
         
 
-        // https://css-tricks.com/snippets/javascript/select-random-item-array/
-         const parksArray = response.data                
-         
-         const randomPark = parksArray[Math.floor(Math.random() * parksArray.length)]
-         
-        //  console.log(randomPark.name)
+        getRandomPark(response.data)
 
-         displayResults(randomPark.name )
+                       
+         
+
+
+         
 
     } catch(err){
         console.log(err)
@@ -221,8 +220,14 @@ function removeHomePage(){
 //random park generate - math methods?
 
 
-function getRandomPark(){
+function getRandomPark(parksArray){
+    // https://css-tricks.com/snippets/javascript/select-random-item-array/
+    // const parksArray = response.data 
+    const randomPark = parksArray[Math.floor(Math.random() * parksArray.length)]
+         
+    //  console.log(randomPark.name)
 
+    displayResults(randomPark.name)
 }
 
 
