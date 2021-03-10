@@ -143,7 +143,7 @@ submit.addEventListener('submit', getSkateParks)
 
 
 function displaySetUp(){
-    removeResults()
+    // removeResults()
     removeHomePage()
     createResultHeader()
 }
