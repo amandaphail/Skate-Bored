@@ -47,7 +47,7 @@ async function getSkateParks(event){
 
 function setLocation (data){        
     
-    removeResults()
+    
     displaySetUp()
     for (i = 0; i < data.length; i++){
         let borough = data[i].borough
@@ -67,7 +67,7 @@ function setLocation (data){
 }
 
 function setFeature(data){
-    removeResults()
+    
     displaySetUp()
     for (i = 0; i < data.length; i++){
         let feature1 = data[i].features_1
@@ -94,7 +94,7 @@ function setFeature(data){
 }
 
 function getBoth(data){
-    removeResults()
+    
     displaySetUp()
     for(i= 0; i < data.length; i++){
         let borough = data[i].borough
@@ -142,7 +142,8 @@ submit.addEventListener('submit', getSkateParks)
 
 
 function displaySetUp(){
-    // removeHomePage()
+    removeResults()
+    removeHomePage()
     createResultHeader()
 }
 
