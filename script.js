@@ -49,7 +49,9 @@ function setLocation (data){
         let name = data[i].name
         let locOption = locationDD.value
         
-        if (borough.includes(locOption)){
+
+        if (featuresDD.value === "null" && borough.includes(locOption)){
+        // if (borough.includes(locOption)){
             // console.log(name)
             getLocation(name)
         }
