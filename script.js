@@ -33,10 +33,11 @@ async function getSkateParks(event){
         } else {
             getBoth(response.data)
         }
+
         
-
-        getRandomPark(response.data)
-
+        // if (button === 'click'){
+        // getRandomPark(response.data)
+        // }
                        
          
 
