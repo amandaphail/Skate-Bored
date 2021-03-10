@@ -26,19 +26,23 @@ async function getSkateParks(event){
         //     console.log("one selector is null")
 
         // } else 
-
+        console.dir()
 
 
         // if(form submitted){}
+        if(event.type === "submit"){
         if (locationDD.value !== "null" && featuresDD.value === "null"){
             setLocation(response.data)
         } else if(locationDD.value === "null" && featuresDD.value !== "null"){
             setFeature(response.data)
         } else if (locationDD.value === "null" && featuresDD.value == "null"){
             alert("Nothing is selected!")
-        } else {
+        } else if (locationDD.value !== "null" && featuresDD.value !== "null") {
             getBoth(response.data)
         }
+    }
+
+
 
         
         // // if (button === 'click'){
@@ -49,7 +53,7 @@ async function getSkateParks(event){
 
 
          
-
+        return response.data
     } catch(err){
         console.log(err)
         console.log(err.message)
@@ -58,9 +62,10 @@ async function getSkateParks(event){
 
 
 
-function getRandomPark(parksArray){
+async function getRandomParks(event){
     // https://css-tricks.com/snippets/javascript/select-random-item-array/
-    // const parksArray = response.data 
+    const parksArray = await getSkateParks(event)
+    console.log(parksArray)
     const randomPark = parksArray[Math.floor(Math.random() * parksArray.length)]
          
     //  console.log(randomPark.name)
@@ -70,7 +75,7 @@ function getRandomPark(parksArray){
 
 
 
- //button.addEventListener('click', )
+ button.addEventListener('click', getRandomParks)
 
 
 function setLocation (data){        
