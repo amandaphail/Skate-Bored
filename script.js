@@ -6,6 +6,7 @@ const featuresDD =document.querySelector('.features')
 // const option = document.querySelector('option')
 const searchResults = document.querySelector('#sr-main')
 let submit = document.querySelector(".form")
+let homepage = document.querySelector("#homepage")
 
 
 async function getSkateParks(event){
