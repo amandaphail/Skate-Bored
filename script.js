@@ -5,7 +5,8 @@ const locationDD = document.querySelector('.location')
 const featuresDD =document.querySelector('.features')
 // const option = document.querySelector('option')
 const searchResults = document.querySelector('#sr-main')
-const form = document.querySelector('.form')
+let submit = document.querySelector(".form")
+
 
 async function getSkateParks(event){
     event.preventDefault()
@@ -123,7 +124,7 @@ function getBoth(data){
 
 
 
-let submit = document.querySelector(".form")
+
 submit.addEventListener('submit', getSkateParks)
 
 // form.onsubmit = function submit(){
