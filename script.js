@@ -61,6 +61,7 @@ function setLocation (data){
 }
 
 function setFeature(data){
+    removeResults()
     for (i = 0; i < data.length; i++){
         let feature1 = data[i].features_1
         let feature2 = data[i].features_2
@@ -86,7 +87,7 @@ function setFeature(data){
 }
 
 function getBoth(data){
-    removeResults()
+    
     for(i= 0; i < data.length; i++){
         let borough = data[i].borough
         let locOption = locationDD.value
