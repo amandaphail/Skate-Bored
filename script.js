@@ -53,9 +53,10 @@ function setLocation (data){
         // if (borough.includes(locOption)){
             // console.log(name)
             getLocation(name)
-        } else {
-            // getBoth(data)
-        }
+        } 
+        // else {
+        //     // getBoth(data)
+        // }
      }
 }
 
@@ -72,9 +73,10 @@ function setFeature(data){
             console.log("location null and feature selected")
             getFeatures(name)
             console.log(data[i].borough)
-        }  else {
-            //  getBoth(data)
-         }
+        }  
+        // else {
+        //     //  getBoth(data)
+        //  }
         // if (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption)){
         //     getFeatures(name)
         //     console.log(data[i].borough)
