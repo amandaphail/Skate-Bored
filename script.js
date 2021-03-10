@@ -7,7 +7,8 @@ const featuresDD =document.querySelector('.features')
 const searchResults = document.querySelector('#sr-main')
 const form = document.querySelector('.form')
 
-async function getSkateParks(){
+async function getSkateParks(event){
+    event.preventDefault()
 
     try{
         const response = await axios.get('https://data.cityofnewyork.us/resource/8knb-zsb6.json')
@@ -116,15 +117,19 @@ function getBoth(data){
 //     displayFeatures(event)
 // }
 
-locationDD.addEventListener('change', getSkateParks)
-featuresDD.addEventListener('change', getSkateParks)
+// locationDD.addEventListener('change', getSkateParks)
+// featuresDD.addEventListener('change', getSkateParks)
 
-// document.getElementById("homepage-form").onsubmit = function() {myFunction()};
 
-form.onsubmit = function submit(){
-    return false;
+
+
+let submit = document.querySelector(".form")
+submit.addEventListener('submit', getSkateParks)
+
+// form.onsubmit = function submit(){
+//     return false;
     //keeps page from refreshing when hit submit
-}
+// }
 // https://stackoverflow.com/questions/19454310/stop-form-refreshing-page-on-submit 
 // https://www.w3schools.com/jsref/event_onsubmit.asp
 
