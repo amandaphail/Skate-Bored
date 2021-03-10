@@ -72,7 +72,7 @@ function setFeature(data){
         
         if(locationDD.value === "null" && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
             console.log("location null and feature selected")
-            getFeatures(name)
+            displayFeatures(name)
             console.log(data[i].borough)
         }  
         // else {
@@ -87,7 +87,7 @@ function setFeature(data){
 }
 
 function getBoth(data){
-    
+    removeResults()
     for(i= 0; i < data.length; i++){
         let borough = data[i].borough
         let locOption = locationDD.value
@@ -109,11 +109,11 @@ function getLocation(event){
     displayLocation(event)
 }
 
-function getFeatures(event){
-    console.log(event)
+// function getFeatures(event){
+//     console.log(event)
     
-    displayFeatures(event)
-}
+//     displayFeatures(event)
+// }
 
 locationDD.addEventListener('change', getSkateParks)
 featuresDD.addEventListener('change', getSkateParks)
@@ -144,6 +144,7 @@ function displayFeatures(feature){
     result.innerText = feature
     result.classList.add('result')
     searchResults.appendChild(result)
+    console.log(feature)
 }
 
 function removeResults (){
