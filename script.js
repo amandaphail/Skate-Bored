@@ -52,7 +52,7 @@ function setLocation (data){
         if (featuresDD.value === "null" && borough.includes(locOption)){
         // if (borough.includes(locOption)){
             // console.log(name)
-            getLocation(name)
+            displayLocation(name)
         } 
         // else {
         //     // getBoth(data)
@@ -103,11 +103,11 @@ function getBoth(data){
     }
 }
 
-function getLocation(event){
-    console.log(event)
+// function getLocation(event){
+//     console.log(event)
     
-    displayLocation(event)
-}
+//     displayLocation(event)
+// }
 
 // function getFeatures(event){
 //     console.log(event)
@@ -136,6 +136,7 @@ function displayLocation(location){
     result.innerText = location
     result.classList.add('result')
     searchResults.appendChild(result)
+    console.log(location)
 
 }
 
