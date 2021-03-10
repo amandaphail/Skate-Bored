@@ -7,6 +7,7 @@ const featuresDD =document.querySelector('.features')
 const searchResults = document.querySelector('#sr-main')
 let submit = document.querySelector(".form")
 let homepage = document.querySelector("#homepage")
+// let main = document.querySelector('main')
 
 
 async function getSkateParks(event){
@@ -139,7 +140,7 @@ submit.addEventListener('submit', getSkateParks)
 
 
 function displayLocation(location){
-
+    removeHomePage()
     let result = document.createElement('p')
     result.innerText = location
     result.classList.add('result')
@@ -176,9 +177,9 @@ function removeResults (){
 
 
 function removeHomePage(){
-    while(searchResults.firstChild){
-        searchResults.removeChild(searchResults.firstChild)
+    while(main.firstChild){
+        main.removeChild(main.firstChild)
+    }
 }
-
 
 //random park generate - math methods?
