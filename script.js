@@ -9,7 +9,7 @@ let submit = document.querySelector(".form")
 // let homepage = document.querySelector("#homepage")
 let main = document.querySelector('main')
 let srHeader = document.querySelector('#sr-header')
-const button = document.querySelector(".randomPark")
+let button = document.querySelector(".randomPark")
 
 
 async function getSkateParks(event){
@@ -30,14 +30,16 @@ async function getSkateParks(event){
             setLocation(response.data)
         } else if(locationDD.value === "null" && featuresDD.value !== "null"){
             setFeature(response.data)
+        } else if (locationDD.value === "null" && featuresDD.value == "null"){
+            alert("Nothing is selected!")
         } else {
             getBoth(response.data)
         }
 
         
-        // if (button === 'click'){
+        // // if (button === 'click'){
         // getRandomPark(response.data)
-        // }
+        // // }
                        
          
 
@@ -52,6 +54,19 @@ async function getSkateParks(event){
 
 
 
+function getRandomPark(parksArray){
+    // https://css-tricks.com/snippets/javascript/select-random-item-array/
+    // const parksArray = response.data 
+    const randomPark = parksArray[Math.floor(Math.random() * parksArray.length)]
+         
+    //  console.log(randomPark.name)
+
+    displayResults(randomPark.name)
+}
+
+
+
+ //button.addEventListener('click', )
 
 
 function setLocation (data){        
@@ -218,21 +233,9 @@ function removeHomePage(){
     }
 }
 
-//random park generate - math methods?
-
-
-function getRandomPark(parksArray){
-    // https://css-tricks.com/snippets/javascript/select-random-item-array/
-    // const parksArray = response.data 
-    const randomPark = parksArray[Math.floor(Math.random() * parksArray.length)]
-         
-    //  console.log(randomPark.name)
-
-    displayResults(randomPark.name)
-}
 
 
 
-// button.addEventListener('click', getRandomPark)
+
 
 
