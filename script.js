@@ -164,6 +164,8 @@ function displayBoth(both){
     console.log(both)
 }
 
+
+
 function removeResults (){
 
     // while we have first child (aka parent isnt empty) - remove first child
@@ -172,6 +174,11 @@ function removeResults (){
     }
 }
 
+
+function removeHomePage(){
+    while(searchResults.firstChild){
+        searchResults.removeChild(searchResults.firstChild)
+}
 
 
 //random park generate - math methods?
