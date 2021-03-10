@@ -98,7 +98,8 @@ function getBoth(data){
         let name = data[i].name
 
         if(borough.includes(locOption) && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
-            console.log(name)
+            displayBoth(name)
+            // console.log(name)
         }
     }
 }
@@ -146,6 +147,14 @@ function displayFeatures(feature){
     result.classList.add('result')
     searchResults.appendChild(result)
     console.log(feature)
+}
+
+function displayBoth(both){
+    let result = document.createElement('p')
+    result.innerText = both
+    result.classList.add('result')
+    searchResults.appendChild(result)
+    console.log(both)
 }
 
 function removeResults (){
