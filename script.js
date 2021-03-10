@@ -7,7 +7,7 @@ const featuresDD =document.querySelector('.features')
 const searchResults = document.querySelector('#sr-main')
 let submit = document.querySelector(".form")
 let homepage = document.querySelector("#homepage")
-// let main = document.querySelector('main')
+let main = document.querySelector('main')
 
 
 async function getSkateParks(event){
@@ -150,6 +150,7 @@ function displayLocation(location){
 }
 
 function displayFeatures(feature){
+    removeHomePage()
     let result = document.createElement('p')
     result.innerText = feature
     result.classList.add('result')
@@ -158,6 +159,7 @@ function displayFeatures(feature){
 }
 
 function displayBoth(both){
+    removeHomePage()
     let result = document.createElement('p')
     result.innerText = both
     result.classList.add('result')
