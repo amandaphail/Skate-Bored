@@ -180,7 +180,7 @@ function displaySetUp(){
     removeHomePage()
     createResultHeader()
     let pageTitle = document.createElement('div')
-    pageTitle.innerText = "Cruise Here:"
+    pageTitle.innerText = "The Spot:"
     pageTitle.classList.add('skate-here')
     searchResults.appendChild(pageTitle)
 }
