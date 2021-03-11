@@ -84,12 +84,39 @@ p {
 #search-results {
   margin: 0 auto;
   /* margin-top: 200px; */
+  display: grid;
+  grid-template-areas:
+    "H H H H"
+    "L A A R"
+    "F F F F";
 }
+
+#sr-header {
+  /* background-color: #262626; */
+  grid-area: H;
+}
+
+#left-column-style{
+  grid-area: L;
+  background-color: #7E7D7D;
+}
+
 
 #sr-main {
   display: flex;
   flex-direction: column;
   /* margin-bottom: 100px; */
+  /* background-color: #7E7D7D; */
+  grid-area: A;
+}
+
+#right-column-style{
+  grid-area: R;
+  /* background-color: #7E7D7D; */
+}
+
+#sr-footer{
+  grid-area: F;
 }
 
 .result {
@@ -103,16 +130,16 @@ p {
   /* where do i use justify content to space the results easily? */
 }
 
-.sr-header {
-  background-color: #262626;
-}
+
+
+
 
 .results-h1 {
   color: #ffd703;
   font-family: "Bebas Neue", cursive;
   margin: 0;
-  font-size: 50px;
-  letter-spacing: 10px;
+  font-size: 60px;
+  letter-spacing: 5px;
 }
 
 .results-h2 {
