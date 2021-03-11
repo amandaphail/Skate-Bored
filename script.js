@@ -182,6 +182,10 @@ function displaySetUp(){
 }
 
 function displayResults(value){
+    let pageTitle = document.createElement('div')
+    pageTitle.innerText = "Skate Here:"
+    searchResults.appendChild(pageTitle)
+
     let result = document.createElement('p')
     result.innerText = value
     result.classList.add('result')
