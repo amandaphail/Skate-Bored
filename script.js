@@ -72,7 +72,7 @@ async function getRandomParks(event){
          
     //  console.log(randomPark.name)
     displaySetUp()
-    displayResults(randomPark.name)
+    displayResults(randomPark)
 }
 
 
