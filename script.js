@@ -217,6 +217,8 @@ function displayResults(value){
 
 
 function createResultHeader(){
+
+    removeHeader()
     // let header = document.createElement('div')
     let title = document.createElement('div')
     title.innerText = "Skate Bored"
@@ -228,9 +230,13 @@ function createResultHeader(){
     subtitle.innerText = "Where are we Going?"
     subtitle.classList.add('results-h2')
     srHeader.appendChild(subtitle)
+    //this repeats but not below, why?
 
-    // srHeader.appendChild()
 
+
+    srHeader.appendChild(submit)
+
+    srHeader.appendChild(button)
 
     
 
@@ -250,6 +256,12 @@ function removeResults (){
 function removeHomePage(){
     while(main.firstChild){
         main.removeChild(main.firstChild)
+    }
+}
+
+function removeHeader(){
+    while(srHeader.firstChild){
+        srHeader.removeChild(srHeader.firstChild)
     }
 }
 
