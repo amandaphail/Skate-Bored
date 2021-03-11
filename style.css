@@ -160,16 +160,23 @@ https://the-echoplex.net/flexyboxes/ */
 
 .result {
   background-color: #c4c4c4;
+  color: #947b00;
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
   width: 100%;
   height: auto;
   margin: 15px auto;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   /* margin-bottom: 15px; */
   padding: 10px;
+  
   /* justify-content: space-around; */
   /* where do i use justify content to space the results easily? */
 }
 
+.result-name{
+  
+}
 
 
 .results-h1 {

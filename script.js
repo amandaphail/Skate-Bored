@@ -108,6 +108,7 @@ function setFeature(data){
         let feature2 = data[i].features_2
         let feature3 = data[i].features_3
         let name = data[i].name
+        let value = data[i]
         let featOption = featuresDD.value
         // console.log(borough)
         
@@ -138,10 +139,11 @@ function getBoth(data){
         let feature2 = data[i].features_2
         let feature3 = data[i].features_3
         let featOption = featuresDD.value
-        let name = data[i].name
+        // let name = data[i].name
+        let value = data[i]
 
         if(borough.includes(locOption) && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
-            displayResults(name)
+            displayResults(value)
             // displayBoth(name)
             // console.log(name)
         }
@@ -227,17 +229,19 @@ function displaySetUp(){
 function displayResults(value){
 
     let result = document.createElement('p')
-    result.innerText = value
+    result.innerText = value.name
     result.classList.add('result')
     searchResults.appendChild(result)
     console.log(value)
 
-    let experiment = document.createElement('div')
+    
 
-    searchResults.insertBefore(experiment, searchResults.children[2])
+    // let experiment = document.createElement('div')
+
+    // searchResults.insertBefore(experiment, searchResults.children[2])
 
 
-    resultsPage.insertBefore(experiment,resultsPage.children[3])
+    // resultsPage.insertBefore(experiment,resultsPage.children[3])
 }
 
 // function displayLocation(location){
