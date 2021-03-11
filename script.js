@@ -5,6 +5,7 @@ const locationDD = document.querySelector('.location')
 const featuresDD =document.querySelector('.features')
 // const option = document.querySelector('option')
 const searchResults = document.querySelector('#sr-main')
+const resultsPage = document.querySelector('#search-results')
 let submit = document.querySelector(".form")
 // let homepage = document.querySelector("#homepage")
 let main = document.querySelector('main')
@@ -234,6 +235,9 @@ function displayResults(value){
     let experiment = document.createElement('div')
 
     searchResults.insertBefore(experiment, searchResults.children[2])
+
+
+    resultsPage.insertBefore(experiment,resultsPage.children[3])
 }
 
 // function displayLocation(location){
