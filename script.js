@@ -217,13 +217,22 @@ function displayResults(value){
 
 
 function createResultHeader(){
-    let header = document.createElement('div')
+    // let header = document.createElement('div')
     let title = document.createElement('div')
     title.innerText = "Skate Bored"
     title.classList.add('results-h1')
-    header.appendChild(title)
-    srHeader.appendChild(header)
+    // header.appendChild(title)
+    srHeader.appendChild(title)
+
+    let subtitle = document.createElement('div')
+    subtitle.innerText = "Where are we Going?"
+    subtitle.classList.add('results-h2')
+    srHeader.appendChild(subtitle)
+
+
     
+
+
 }
 
 
