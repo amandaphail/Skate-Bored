@@ -84,7 +84,8 @@ function setLocation (data){
     displaySetUp()
     for (i = 0; i < data.length; i++){
         let borough = data[i].borough
-        let name = data[i].name
+        // let name = data[i].name
+        let value = data[i]
         let locOption = locationDD.value
         
 
@@ -92,7 +93,7 @@ function setLocation (data){
         // if (borough.includes(locOption)){
             // console.log(name)
             // displayLocation(name)
-            displayResults(name)
+            displayResults(value)
         } 
         // else {
         //     // getBoth(data)
@@ -107,7 +108,7 @@ function setFeature(data){
         let feature1 = data[i].features_1
         let feature2 = data[i].features_2
         let feature3 = data[i].features_3
-        let name = data[i].name
+        // let name = data[i].name
         let value = data[i]
         let featOption = featuresDD.value
         // console.log(borough)
@@ -115,7 +116,7 @@ function setFeature(data){
         if(locationDD.value === "null" && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
             // console.log("location null and feature selected")
             // displayFeatures(name)
-            displayResults(name)
+            displayResults(value)
             console.log(data[i].borough)
         }  
         // else {
