@@ -243,20 +243,20 @@ function displayResults(value){
 
     let resultLocation = document.createElement('p')
     resultLocation.classList.add('result-location')
-    resultLocation.innerText = value.borough
+    resultLocation.innerText = `Location: ${value.borough}`
 
 
     let resultFeat1 = document.createElement('p')
     resultFeat1.classList.add('result-feat')
-    resultFeat1.innerText = value.features_1 
+    resultFeat1.innerText = `Feature 1: ${value.features_1}` 
 
     let resultFeat2 = document.createElement('p')
     resultFeat2.classList.add('result-feat')
-    resultFeat2.innerText = value.features_2 
+    resultFeat2.innerText = `Feature 2: ${value.features_2}`
     
     let resultFeat3 = document.createElement('p')
     resultFeat3.classList.add('result-feat')
-    resultFeat3.innerText = value.features_3
+    resultFeat3.innerText = `Feature 3: ${value.features_3}`
 
 
     leftDIV.appendChild(resultName)
