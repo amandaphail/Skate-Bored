@@ -100,6 +100,9 @@ p {
     align-content: flex-end;
     /* align-items: flex-start; */
 }
+/* got flexbox help with this tool
+https://the-echoplex.net/flexyboxes/ */
+
 
 .left-div{
 
@@ -127,6 +130,13 @@ p {
   flex-direction: column;
   background-color: #7E7D7D;
   grid-area: A;
+}
+
+.skate-here{
+  font-size: 50px;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  margin: 20px 0;
 }
 
 #right-column-style{
