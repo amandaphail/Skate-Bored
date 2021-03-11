@@ -148,13 +148,12 @@ https://the-echoplex.net/flexyboxes/ */
   
   background-color: #262626;
   height: 20px;
-  /* position: fixed;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-   */
-  /* position: absolute;
-  bottom: 20px; */
+  
+  
   grid-area: F;
 }
 
