@@ -219,24 +219,26 @@ function displayResults(value){
 function createResultHeader(){
 
     removeHeader()
-    // let header = document.createElement('div')
+    let titles = document.createElement('div')
     let title = document.createElement('div')
     title.innerText = "Skate Bored"
     title.classList.add('results-h1')
-    // header.appendChild(title)
-    srHeader.appendChild(title)
+    titles.appendChild(title)
+    
 
     let subtitle = document.createElement('div')
     subtitle.innerText = "Where are we Going?"
     subtitle.classList.add('results-h2')
-    srHeader.appendChild(subtitle)
-    //this repeats but not below, why?
+    titles.appendChild(subtitle)
+    
+    srHeader.appendChild(titles)
 
 
+    let nav = document.createElement('div')
+    nav.appendChild(submit)
 
-    srHeader.appendChild(submit)
-
-    srHeader.appendChild(button)
+    nav.appendChild(button)
+    srHeader.appendChild(nav)
 
     
 

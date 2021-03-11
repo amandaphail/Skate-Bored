@@ -99,15 +99,8 @@ p {
 #sr-header {
   background-color: #262626;
   grid-area: H;
-  /* display: flex; */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "SB SB""FO FO"
-    "WG WG" "GA GA"
-    ;
+ 
+
 }
 
 #left-column-style{
@@ -159,24 +152,24 @@ p {
   margin: 0;
   font-size: 60px;
   letter-spacing: 5px;
-  grid-area: SB;
+  
 }
 
 .results-h2 {
   color: white;
   font-family: "Amatic SC", cursive;
   font-size: 30px;
-  grid-area: WG;
+  
 }
 
 .form{
-  grid-area:FO;
+
 }
 
 #homepage-rp {
   /* grid-area: rp; */
   margin: 15px;
-  grid-area: GA;
+  
 }
 
 @media screen and (max-width: 600px){
