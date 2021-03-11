@@ -161,7 +161,7 @@ https://the-echoplex.net/flexyboxes/ */
 .result {
   background-color: #c4c4c4;
   width: 100%;
-  height: auto;
+  height: 200px;
   margin: 15px auto;
   margin-bottom: 70px;
   padding: 10px;
@@ -169,7 +169,7 @@ https://the-echoplex.net/flexyboxes/ */
   display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-content: flex-start;
     align-items: flex-start;
   
@@ -178,11 +178,21 @@ https://the-echoplex.net/flexyboxes/ */
 .leftDIV{
   margin-left: 100px;
   text-align: center;
+  border-right: solid #524B2A 1px;
+  height:190px;
+  padding-right: 20px;
 }
 
 .rightDIV{
   margin-right: 200px;
   text-align: center;
+  display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 25px 0 0 30px;
+    
 }
 
 .result-name{
