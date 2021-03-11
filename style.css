@@ -175,6 +175,11 @@ https://the-echoplex.net/flexyboxes/ */
   
 }
 
+.rightDIV{
+  margin-right: 50px;
+  text-align: center;
+}
+
 .result-name{
   color: #947b00;
   font-family: "Bebas Neue", cursive;
