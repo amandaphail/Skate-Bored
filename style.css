@@ -70,11 +70,12 @@ p {
 
 #homepage-loc {
   /* grid-area: lo; */
-  padding: 5px;
+  padding: 10px;
 }
 #homepage-feat {
   /* grid-area: fe; */
-  padding: 5px;
+  padding: 10px;
+  margin-left: 15px;
 }
 
 #homepage-search {
@@ -126,7 +127,6 @@ p {
 #sr-main {
   display: flex;
   flex-direction: column;
-  /* margin-bottom: 100px; */
   background-color: #7E7D7D;
   grid-area: A;
 }
@@ -177,7 +177,7 @@ p {
 }
 
 .formSR{
-  
+
 
 }
 
