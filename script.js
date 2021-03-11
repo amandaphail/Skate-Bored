@@ -243,6 +243,7 @@ function createResultHeader(){
     let nav = document.createElement('div')
     nav.classList.add('right-div')
     nav.appendChild(submit)
+    submit.classList.add('formSR')
 
     nav.appendChild(button)
     srHeader.appendChild(nav)

@@ -108,6 +108,15 @@ p {
     align-items: flex-start;
 }
 
+.left-div{
+
+}
+
+.right-div{
+
+}
+
+
 #left-column-style{
   grid-area: L;
   background-color: #7E7D7D;
@@ -167,7 +176,8 @@ p {
   
 }
 
-.form{
+.formSR{
+  
 
 }
 
