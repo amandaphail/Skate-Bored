@@ -197,11 +197,13 @@ https://the-echoplex.net/flexyboxes/ */
 }
 
 .result-location{
-  color: red;
+  color: #524B2A;
+  font-weight:bold;
 }
 
 .result-feat{
-  color: blue;
+  color: black;
+  font-size: 14px;
 }
 
 
@@ -222,10 +224,7 @@ https://the-echoplex.net/flexyboxes/ */
   
 }
 
-.formSR{
 
-
-}
 
 #homepage-rp {
   /* grid-area: rp; */

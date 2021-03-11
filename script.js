@@ -246,6 +246,8 @@ function displayResults(value){
     resultLocation.innerText = `Location: ${value.borough}`
 
 
+
+
     let resultFeat1 = document.createElement('p')
     resultFeat1.classList.add('result-feat')
     resultFeat1.innerText = `Feature 1: ${value.features_1}` 
@@ -260,10 +262,11 @@ function displayResults(value){
 
 
     leftDIV.appendChild(resultName)
+    leftDIV.appendChild(resultLocation)
     result.appendChild(leftDIV)
 
 
-    rightDIV.appendChild(resultLocation)
+    
     rightDIV.appendChild(resultFeat1)
     rightDIV.appendChild(resultFeat2)
     rightDIV.appendChild(resultFeat3)
