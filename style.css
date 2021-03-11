@@ -100,7 +100,12 @@ p {
   background-color: #262626;
   grid-area: H;
  
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
 }
 
 #left-column-style{
