@@ -1,3 +1,9 @@
+/* .wf-loading body {
+visibility: hidden;
+} */
+/* https://wordpress.com/forums/topic/font-changes-as-page-loads/ */
+/* https://css-tricks.com/font-display-masses/ */
+
 body {
   background-color: #262626;
   margin: 0 auto;
@@ -84,6 +90,8 @@ p {
 #search-results {
   margin: 0 auto;
   /* margin-top: 200px; */
+  /* height:100%;
+  width:auto; */
   display: grid;
   grid-template-areas:
     "H H H H"
@@ -116,17 +124,20 @@ p {
 }
 
 #sr-footer{
-  grid-area: F;
-  background-color: #262626;
   
+  background-color: blue;
+  height: 20px;
+  /* position: absolute;
+  bottom: 20px; */
+  grid-area: F;
 }
 
 .result {
   background-color: #c4c4c4;
-  width: 70%;
+  width: 100%;
   height: auto;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  margin: 15px auto;
+  /* margin-bottom: 15px; */
   padding: 10px;
   /* justify-content: space-around; */
   /* where do i use justify content to space the results easily? */
@@ -148,4 +159,12 @@ p {
   color: white;
   font-family: "Amatic SC", cursive;
   font-size: 30px;
+}
+
+
+
+@media screen and (max-width: 600px){
+
+
+
 }
