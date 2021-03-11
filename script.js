@@ -229,9 +229,13 @@ function displaySetUp(){
 
 function displayResults(value){
 
-    let result = document.createElement('p')
-    result.innerText = value.name
+    let result = document.createElement('div')
     result.classList.add('result')
+    let resultName = document.createElement('p')
+    resultName.classList.add('result-name')
+    resultName.innerText = value.name
+
+    result.appendChild(resultName)
     searchResults.appendChild(result)
     console.log(value)
 
