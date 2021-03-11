@@ -175,8 +175,13 @@ https://the-echoplex.net/flexyboxes/ */
   
 }
 
+.leftDIV{
+  margin-left: 100px;
+  text-align: center;
+}
+
 .rightDIV{
-  margin-right: 50px;
+  margin-right: 200px;
   text-align: center;
 }
 
