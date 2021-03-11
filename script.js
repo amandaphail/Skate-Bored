@@ -179,12 +179,12 @@ function displaySetUp(){
     removeResults()
     removeHomePage()
     createResultHeader()
-}
-
-function displayResults(value){
     let pageTitle = document.createElement('div')
     pageTitle.innerText = "Skate Here:"
     searchResults.appendChild(pageTitle)
+}
+
+function displayResults(value){
 
     let result = document.createElement('p')
     result.innerText = value
