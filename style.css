@@ -181,6 +181,14 @@ https://the-echoplex.net/flexyboxes/ */
   margin: auto 20px;
 }
 
+.result-location{
+  color: red;
+}
+
+.result-feat{
+  color: blue;
+}
+
 
 .results-h1 {
   color: #ffd703;

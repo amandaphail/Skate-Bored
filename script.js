@@ -229,13 +229,44 @@ function displaySetUp(){
 
 function displayResults(value){
 
+    let leftDIV = document.createElement('div')
+    let rightDIV = document.createElement('div')
+
     let result = document.createElement('div')
     result.classList.add('result')
+
     let resultName = document.createElement('p')
     resultName.classList.add('result-name')
     resultName.innerText = value.name
 
-    result.appendChild(resultName)
+    let resultLocation = document.createElement('p')
+    resultLocation.classList.add('result-location')
+    resultLocation.innerText = value.borough
+
+
+    let resultFeat1 = document.createElement('p')
+    resultFeat1.classList.add('result-feat')
+    resultFeat1.innerText = value.features_1 
+
+    let resultFeat2 = document.createElement('p')
+    resultFeat2.classList.add('result-feat')
+    resultFeat2.innerText = value.features_2 
+    
+    let resultFeat3 = document.createElement('p')
+    resultFeat3.classList.add('result-feat')
+    resultFeat3.innerText = value.features_3
+
+
+    leftDIV.appendChild(resultName)
+    result.appendChild(leftDIV)
+
+
+    rightDIV.appendChild(resultLocation)
+    rightDIV.appendChild(resultFeat1)
+    rightDIV.appendChild(resultFeat2)
+    rightDIV.appendChild(resultFeat3)
+    result.appendChild(rightDIV)
+    
     searchResults.appendChild(result)
     console.log(value)
 
