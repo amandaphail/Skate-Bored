@@ -225,6 +225,7 @@ function createResultHeader(){
 
     removeHeader()
     let titles = document.createElement('div')
+    titles.classList.add('left-div')
     let title = document.createElement('div')
     title.innerText = "Skate Bored"
     title.classList.add('results-h1')
@@ -240,6 +241,7 @@ function createResultHeader(){
 
 
     let nav = document.createElement('div')
+    nav.classList.add('right-div')
     nav.appendChild(submit)
 
     nav.appendChild(button)
