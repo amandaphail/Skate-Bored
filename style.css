@@ -160,11 +160,10 @@ https://the-echoplex.net/flexyboxes/ */
 
 .result {
   background-color: #c4c4c4;
-  
   width: 100%;
   height: auto;
   margin: 15px auto;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
   /* margin-bottom: 15px; */
   padding: 10px;
   
@@ -175,7 +174,8 @@ https://the-echoplex.net/flexyboxes/ */
 .result-name{
   color: #947b00;
   font-family: "Bebas Neue", cursive;
-  font-size: 30px;
+  font-size: 33px;
+  letter-spacing: 2px;
   width: 300px;
   height: auto;
   margin: auto 20px;
