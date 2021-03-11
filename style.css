@@ -176,6 +176,9 @@ https://the-echoplex.net/flexyboxes/ */
   color: #947b00;
   font-family: "Bebas Neue", cursive;
   font-size: 30px;
+  width: 300px;
+  height: auto;
+  margin: auto 20px;
 }
 
 
