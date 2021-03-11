@@ -69,7 +69,7 @@ async function getRandomParks(event){
     const randomPark = parksArray[Math.floor(Math.random() * parksArray.length)]
          
     //  console.log(randomPark.name)
-
+    displaySetUp()
     displayResults(randomPark.name)
 }
 
