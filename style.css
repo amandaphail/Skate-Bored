@@ -130,7 +130,7 @@ https://the-echoplex.net/flexyboxes/ */
   flex-direction: column;
   background-color: #7E7D7D;
   grid-area: A;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 
 .skate-here{
@@ -163,6 +163,7 @@ https://the-echoplex.net/flexyboxes/ */
   width: 100%;
   height: auto;
   margin: 15px auto;
+  margin-bottom: 100px;
   /* margin-bottom: 15px; */
   padding: 10px;
   /* justify-content: space-around; */
