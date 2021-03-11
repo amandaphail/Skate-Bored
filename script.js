@@ -10,8 +10,9 @@ let submit = document.querySelector(".form")
 let main = document.querySelector('main')
 let srHeader = document.querySelector('#sr-header')
 let button = document.querySelector(".randomPark")
+let body = document.querySelector('body')
 
-
+removeSearchResultsPage()
 async function getSkateParks(event){
     event.preventDefault()
 
@@ -175,6 +176,41 @@ submit.addEventListener('submit', getSkateParks)
 // https://www.w3schools.com/jsref/event_onsubmit.asp
 
 
+function createResultHeader(){
+
+    removeHeader()
+    let titles = document.createElement('div')
+    titles.classList.add('left-div')
+    let title = document.createElement('div')
+    title.innerText = "Skate Bored"
+    title.classList.add('results-h1')
+    titles.appendChild(title)
+    
+
+    let subtitle = document.createElement('div')
+    subtitle.innerText = "Where are we Going?"
+    subtitle.classList.add('results-h2')
+    titles.appendChild(subtitle)
+    
+    srHeader.appendChild(titles)
+
+
+    let nav = document.createElement('div')
+    nav.classList.add('right-div')
+    nav.appendChild(submit)
+    submit.classList.add('formSR')
+
+    nav.appendChild(button)
+    srHeader.appendChild(nav)
+
+
+}
+
+// function createSearchResults(){
+//     let srMain = document.createElement()
+// }
+
+
 function displaySetUp(){
     removeResults()
     removeHomePage()
@@ -185,6 +221,8 @@ function displaySetUp(){
     searchResults.appendChild(pageTitle)
 }
 
+
+
 function displayResults(value){
 
     let result = document.createElement('p')
@@ -192,6 +230,10 @@ function displayResults(value){
     result.classList.add('result')
     searchResults.appendChild(result)
     console.log(value)
+
+    let experiment = document.createElement('div')
+
+    searchResults.insertBefore(experiment, searchResults.children[2])
 }
 
 // function displayLocation(location){
@@ -221,37 +263,7 @@ function displayResults(value){
 
 
 
-function createResultHeader(){
 
-    removeHeader()
-    let titles = document.createElement('div')
-    titles.classList.add('left-div')
-    let title = document.createElement('div')
-    title.innerText = "Skate Bored"
-    title.classList.add('results-h1')
-    titles.appendChild(title)
-    
-
-    let subtitle = document.createElement('div')
-    subtitle.innerText = "Where are we Going?"
-    subtitle.classList.add('results-h2')
-    titles.appendChild(subtitle)
-    
-    srHeader.appendChild(titles)
-
-
-    let nav = document.createElement('div')
-    nav.classList.add('right-div')
-    nav.appendChild(submit)
-    submit.classList.add('formSR')
-
-    nav.appendChild(button)
-    srHeader.appendChild(nav)
-
-    
-
-
-}
 
 
 function removeResults (){
@@ -275,6 +287,10 @@ function removeHeader(){
     }
 }
 
+function removeSearchResultsPage(){
+        body.removeChild(body.lastChild)
+    
+}
 
 
 
