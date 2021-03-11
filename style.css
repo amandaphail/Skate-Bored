@@ -92,7 +92,7 @@ p {
 }
 
 #sr-header {
-  /* background-color: #262626; */
+  background-color: #262626;
   grid-area: H;
 }
 
@@ -106,17 +106,19 @@ p {
   display: flex;
   flex-direction: column;
   /* margin-bottom: 100px; */
-  /* background-color: #7E7D7D; */
+  background-color: #7E7D7D;
   grid-area: A;
 }
 
 #right-column-style{
   grid-area: R;
-  /* background-color: #7E7D7D; */
+  background-color: #7E7D7D;
 }
 
 #sr-footer{
   grid-area: F;
+  background-color: #262626;
+  
 }
 
 .result {
