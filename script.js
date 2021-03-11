@@ -181,6 +181,7 @@ function displaySetUp(){
     createResultHeader()
     let pageTitle = document.createElement('div')
     pageTitle.innerText = "Skate Here:"
+    pageTitle.classList.add('skate-here')
     searchResults.appendChild(pageTitle)
 }
 
