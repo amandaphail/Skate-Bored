@@ -260,6 +260,25 @@ body{
   /* grid-area: wg; */
 }
 
+form{
+  display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* align-content: space-between; */
+    align-items: center; 
+}
+
+#homepage-loc {
+  /* grid-area: lo; */
+  padding: 0;
+}
+#homepage-feat {
+  /* grid-area: fe; */
+  padding: 0;
+  margin-left: 0;
+}
+
 
 #search-results {
   /* margin: 0 auto; */
