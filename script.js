@@ -229,6 +229,8 @@ function displaySetUp(){
 
 function displayResults(value){
 
+
+
     let leftDIV = document.createElement('div')
     leftDIV.classList.add('leftDIV')
     let rightDIV = document.createElement('div')
