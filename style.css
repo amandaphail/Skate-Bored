@@ -321,7 +321,12 @@ form{
 }
 
 .right-div{
-  
+  display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
 }
 
 #sr-main {
