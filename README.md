@@ -297,16 +297,16 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Make commits to GitHub every day.
 - A README.md file that contains your project worksheet, a link to your live, deployed site, and any necessary installation instructions such as npm i.
 
-- Allow user to search for parks by certain features (e.g. quarter pipe, bank ramp, etc.)
-- Allow user to choose parks visited and collect them on a list
-- Allow user to rate the skate parks and visited parks to be ordered from highest to lowest rating
-- "Explore a New Park" button - allowing user to randomly generate a park they have not visited before
+- Allow user to search for parks by location and certain features (e.g. quarter pipe, bank ramp, etc.)
 - "Random Park" generator that can return a random park they have or have not visited (all parks)
-- Use multiple HTML pages
+- Use Javascript to dedicate entire page to results
 
 #### PostMVP
 
 - Add second API
+- Allow user to choose parks visited and collect them on a list
+- Allow user to rate the skate parks and visited parks to be ordered from highest to lowest rating
+- "Explore a New Park" button - allowing user to randomly generate a park they have not visited before
 - Use local storage to save visited parks list
 - add notes on their personal visited page about parks (e.g. not too crowded, bring Zach here - he would like it, etc.)
 
@@ -318,39 +318,79 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 | Component                                   | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Getting API prepared to work with Each Page |    M     |      1hr       |      N/A      |     N/A     |
-| Write homepage HTML                         |    M     |      2hrs      |      N/A      |     N/A     |
-| Write search results page HTML              |    M     |      2hrs      |      N/A      |     N/A     |
+| Getting API prepared to work with Each Page |    M     |      1hr       |     .5hrs     |    .5hrs    |
+| Write homepage HTML                         |    M     |      2hrs      |      1hr      |     1hr     |
+| Write search results page HTML              |    M     |      2hrs      |      1hr      |     1hr     |
 | Write visited parks page HTML               |    M     |      2hrs      |      N/A      |     N/A     |
-| Work on Features Drop Down                  |    H     |      3hrs      |      N/A      |     N/A     |
-| Work on Location Drop Down                  |    H     |      3hrs      |      N/A      |     N/A     |
+| Work on Features Drop Down                  |    H     |      3hrs      |     5hrs      |    5hrs     |
+| Work on Location Drop Down                  |    H     |      3hrs      |     5hrs      |    5hrs     |
+| Filter results to print accurate results    |    H     |      N/A       |     5hrs      |    5hrs     |
 | Visited Park List                           |          |                |               |
 | Allow User to Check Parks Visited           |    H     |      2hrs      |      N/A      |     N/A     |
 | Write List Array For Them to be Added to    |    H     |      2hrs      |      N/A      |     N/A     |
 | New Park Button                             |          |                |               |             |
 | Remove Parks Already Visited from Search    |    H     |      2hrs      |      N/A      |     N/A     |
 | Choose Random Park from Remaining Parks     |    H     |      3hrs      |      N/A      |     N/A     |
-| Work on Random Park Button & Results        |    M     |      3hrs      |      N/A      |     N/A     |
+| Work on Random Park Button & Results        |    M     |      3hrs      |     5hrs      |    5hrs     |
 | Rating System for Parks Visited             |          |                |               |             |
 | Allow User to Select Wheel Rating           |    M     |      3hrs      |      N/A      |     N/A     |
 | Order List According to Rating              |    M     |      2hrs      |      N/A      |     N/A     |
-| Write Homepage CSS                          |    H     |      3hrs      |      N/A      |     N/A     |
-| Write Search Results Page CSS               |    H     |      3hrs      |      N/A      |     N/A     |
+| Write Homepage CSS                          |    H     |      3hrs      |     4hrs      |    4hrs     |
+| Write Search Results Page CSS               |    H     |      3hrs      |     6hrs      |    6hrs     |
 | Write Visited Parks CSS                     |    H     |      3hrs      |      N/A      |     N/A     |
-| Total                                       |          |     36 hrs     |      N/A      |     N/A     |
+| Write MediaQuery CSS                        |    H     |      N/A       |     4hrs      |    4hrs     |
+| Total                                       |          |     36 hrs     |    36.5hrs    |   36.5hrs   |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+Here I've included the code snippet where I create within my JavaScript the HTML layout for my results to display which are set in a function that is called. I needed to create multiple div tags and p tags to allow detailed styling in my CSS, and use string interpolation to fill out the results.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+let leftDIV = document.createElement('div')
+    leftDIV.classList.add('leftDIV')
+    let rightDIV = document.createElement('div')
+    rightDIV.classList.add('rightDIV')
+    let result = document.createElement('div')
+    result.classList.add('result')
+
+    let resultName = document.createElement('p')
+    resultName.classList.add('result-name')
+    resultName.innerText = value.name
+
+    let resultLocation = document.createElement('p')
+    resultLocation.classList.add('result-location')
+    resultLocation.innerText = `Location: ${value.borough}`
+
+
+    let resultFeat1 = document.createElement('p')
+    resultFeat1.classList.add('result-feat')
+    resultFeat1.innerText = `Feature 1: ${value.features_1}`
+
+    let resultFeat2 = document.createElement('p')
+    resultFeat2.classList.add('result-feat')
+    resultFeat2.innerText = `Feature 2: ${value.features_2}`
+
+    let resultFeat3 = document.createElement('p')
+    resultFeat3.classList.add('result-feat')
+    resultFeat3.innerText = `Feature 3: ${value.features_3}`
+
+
+    leftDIV.appendChild(resultName)
+    leftDIV.appendChild(resultLocation)
+    result.appendChild(leftDIV)
+
+    rightDIV.appendChild(resultFeat1)
+    rightDIV.appendChild(resultFeat2)
+    rightDIV.appendChild(resultFeat3)
+    result.appendChild(rightDIV)
+
+    searchResults.appendChild(result)
 ```
 
 ## Change Log
 
-Use this section to document what changes were made and the reasoning behind those changes.
+Moved some of my MVP's to Post-MVP as local storage or creating a data base would be necessary for those features.
+
+Made some design changes, as this way it looks cleaner.
 
 # Skate-Bored
