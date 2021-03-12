@@ -104,9 +104,7 @@ p {
 https://the-echoplex.net/flexyboxes/ */
 
 
-.left-div{
 
-}
 
 .right-div{
   /* text-align: right; */
@@ -249,7 +247,7 @@ https://the-echoplex.net/flexyboxes/ */
 
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 780px){
 
 body{
   /* background-color: red; */
@@ -308,7 +306,6 @@ form{
 .results-h2{
   font-size: 25px;
   letter-spacing: 2px;
-  margin-bottom: 20px;
 }
 
 .formSR{
@@ -319,6 +316,7 @@ form{
     /* align-content: space-between; */
     align-items: center; 
 }
+
 
 #search-results {
   /* margin: 0 auto; */
@@ -331,7 +329,7 @@ form{
 }
 
 #sr-header {
-  
+    padding-bottom: 0;
     text-align: center;
     width: 100%;
     display: flex;
@@ -356,7 +354,20 @@ form{
   flex-direction: column;
   /* margin-bottom: 100px; */
   
-  
 }
+
+
+.skate-here{
+  font-size: 40px;
+  margin: 20px 0;
+  /* font-size: 60px;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  margin: 100px 0 50px 0; */
+}
+
+
+
+
 
 }
