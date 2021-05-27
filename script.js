@@ -20,7 +20,7 @@ async function getSkateParks(event){
         if(event.type === "submit"){
         if (locationDD.value !== "null" && featuresDD.value === "null"){
             setLocation(response.data)
-        } else if(locationDD.value === "null" && featuresDD.value !== "null"){
+        } else if (locationDD.value === "null" && featuresDD.value !== "null") {
             setFeature(response.data)
         } else if (locationDD.value === "null" && featuresDD.value == "null"){
             alert("Nothing is selected!")
@@ -82,7 +82,7 @@ function setFeature(data){
         if(locationDD.value === "null" && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
 
             displayResults(value)
-        }  
+        }
 
 
      }
@@ -102,7 +102,11 @@ function getBoth(data){
 
         if(borough.includes(locOption) && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))){
             displayResults(value)
-
+        } else if (borough.includes(locOption) && (!feature1.includes(featOption) && !feature2.includes(featOption) && !feature3.includes(featOption))){
+          alert("This park does not exist!")
+          // maybe make this before for loop so for loop doesnt run unless there is something to produce
+          //alert pops up 3 times - for each feature?
+          //end execution so display set up doesnt run
         }
     }
 }
