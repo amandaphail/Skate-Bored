@@ -181,6 +181,13 @@ https://the-echoplex.net/flexyboxes/ */
     
 }
 
+.no-park{
+  text-align:center;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  padding-bottom: 130px;
+}
+
 .result-name{
   color: #947b00;
   font-family: "Bebas Neue", cursive;
@@ -345,6 +352,11 @@ form{
   font-size: 40px;
   margin: 20px 0;
 
+}
+
+.no-park{
+  font-size: 15px;
+  padding-bottom: 80%;
 }
 
 .result{

@@ -89,31 +89,8 @@ function setFeature(data) {
 }
 
 
-// function getBoth(data) {
 
-//   for (i = 0; i < data.length; i++) {
-//     let borough = data[i].borough
-//     let locOption = locationDD.value
-//     let feature1 = data[i].features_1
-//     let feature2 = data[i].features_2
-//     let feature3 = data[i].features_3
-//     let featOption = featuresDD.value
-//     let value = data[i]
-
-//     if (borough.includes(locOption) && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))) {
-//       displaySetUp()
-//       displayResults(value)
-//     } else if (borough.includes(locOption) && (!feature1.includes(featOption) && !feature2.includes(featOption) && !feature3.includes(featOption))) {
-//       alert("This park does not exist!")
-//       console.log("why")
-
-//       //alert pops up 3 or 4 or 5 times - for each feature?
-
-//     }
-//   }
-// }
-
-let alert = false
+let noResult = false
 
 function getBoth(data) {
 
@@ -128,24 +105,19 @@ function getBoth(data) {
     let value = data[i]
 
     if (borough.includes(locOption) && (feature1.includes(featOption) || feature2.includes(featOption) || feature3.includes(featOption))) {
-      alert = true
+      noResult = true
       displayResults(value)
-      // console.log("print")
     }
   }
-  if (alert === false) {
-
-    // console.log("nope")
-    // console.log(data[i])
+  if (noResult === false) {
     let none = document.createElement('p')
     none.classList.add('no-park')
     none.innerText = "This park does not exist!"
     searchResults.appendChild(none)
 
-    alert = true
+    noResult = true
   }
-
-  alert = false
+  noResult = false
 }
 
 
