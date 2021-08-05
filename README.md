@@ -312,9 +312,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Use local storage to save visited parks list
 - add notes on their personal visited page about parks (e.g. not too crowded, bring Zach here - he would like it, etc.)
 
-## Priority Matrix
-
-![alt text](https://res.cloudinary.com/mandatea/image/upload/v1615217751/download_1_p6iwcd.png "Logo Title Text 1")
 
 ## Timeframes
 
@@ -395,4 +392,4 @@ Moved some of my MVP's to Post-MVP as local storage or creating a data base woul
 
 Made some design changes, as this way it looks cleaner.
 
-# Skate-Bored
+
